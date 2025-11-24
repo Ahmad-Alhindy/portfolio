@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code, Palette, Zap, Heart, Download } from "lucide-react";
+import { Code, Blocks, Zap, Database, Download } from "lucide-react";
 import StudySection from "@/components/StudySection";
 
 const About = () => {
@@ -10,13 +10,13 @@ const About = () => {
       icon: Code,
       title: "Development",
       description:
-        "Expert in React, TypeScript, Node.js, and modern web technologies",
+        "Expert in backend development, system design, Node.js, and modern technologies",
     },
     {
-      icon: Palette,
-      title: "Design",
+      icon: Blocks,
+      title: "Architecture",
       description:
-        "Creating beautiful, intuitive interfaces with attention to detail",
+        "Designing scalable and maintainable system architectures",
     },
     {
       icon: Zap,
@@ -25,9 +25,9 @@ const About = () => {
         "Optimizing for speed and delivering exceptional user experiences",
     },
     {
-      icon: Heart,
-      title: "Passion",
-      description: "Dedicated to crafting solutions that make a real impact",
+      icon: Database,
+      title: "Database",
+      description: "Experienced in designing and managing databases for robust applications",
     },
   ];
 
@@ -50,8 +50,9 @@ const About = () => {
               About <span className="gradient-text">Me</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Passionate about creating exceptional digital experiences that
-              combine beautiful design with powerful functionality.
+              Passionate about developing efficient backend systems and
+              full-stack applications, with a focus on performance, reliability,
+              and user experience.
             </p>
           </div>
 
@@ -60,17 +61,19 @@ const About = () => {
             <div className="space-y-6 animate-fade-in-up">
               <h2 className="text-3xl font-display font-bold">My Journey</h2>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a creative developer with a passion for building beautiful,
-                functional, and user-friendly digital experiences. With over 5
-                years of experience in the industry, I've had the pleasure of
-                working with amazing clients and teams to bring their visions to
-                life.
+                I’m a final-year Data Engineering student specializing in mobile
+                and web technologies. Previously, I worked as a CNC operator and
+                at Skruf Snus AB, and I’ve also explored roles in healthcare and
+                taxi services.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My approach combines technical expertise with creative
-                problem-solving, always keeping the end-user at the center of
-                every decision. I believe great design isn't just about how
-                something looks, but how it works and feels to use.
+                I’m social, responsible, and persistent, with a strong interest
+                in technology, AI, and modern solutions. I enjoy
+                problem-solving, teamwork, and presenting ideas clearly.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                I’m eager to continue learning and contributing to projects that
+                combine creativity with technical solutions.
               </p>
             </div>
 
@@ -121,13 +124,23 @@ const About = () => {
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 "React",
+                "JavaScript",
                 "TypeScript",
                 "Node.js",
                 "Tailwind CSS",
                 "Next.js",
-                "PostgreSQL",
+                "MySQL",
                 "Git",
                 "Figma",
+                "Docker",
+                "C++",
+                "Python",
+                "Java",
+                "Jetpack Compose",
+                "Kotlin",
+                "Android Studio",
+                "Swift",
+                "Xcode",
               ].map((tech, index) => (
                 <span
                   key={index}
@@ -146,10 +159,6 @@ const About = () => {
               <h2 className="text-3xl font-display font-bold mb-4 gradient-text">
                 Download My Resume
               </h2>
-              <p className="text-muted-foreground mb-6">
-                Get a detailed overview of my experience, skills, and
-                qualifications
-              </p>
               <Button
                 asChild
                 size="lg"

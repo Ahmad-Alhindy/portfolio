@@ -3,22 +3,25 @@ import { GraduationCap } from "lucide-react";
 
 const education = [
   {
-    degree: "Bachelor of Computer Science",
-    institution: "University Name",
-    period: "2018 - 2022",
-    description: "Focused on software engineering, web development, and algorithms",
+    degree: "High school Diploma",
+    institution: "Aleholm High School",
+    period: "2016 - 2017",
+    description:
+      "CNC programming and production technologies with a focus on industry",
   },
   {
-    degree: "Full Stack Development Bootcamp",
-    institution: "Coding Academy",
-    period: "2022",
-    description: "Intensive program covering modern web technologies and best practices",
+    degree: "Data Engineering in Mobile and Platform",
+    institution: "Jönköping University",
+    period: "2023 - Present",
+    description:
+      "Object-oriented programming, web development, mobile app development, logic and backend development, databases, and several programming languages.",
   },
-  {
-    degree: "Professional Certifications",
-    institution: "Various Platforms",
-    period: "2020 - Present",
-    description: "AWS Certified, Google UX Design, Advanced React Patterns",
+   {
+    degree: "React, TypeScript & Next.js",
+    institution: "Udemy",
+    period: "2025",
+    description:
+      "Learned modern frontend development with React, TypeScript, and Next.js, including component design, state management, and server-side rendering.",
   },
 ];
 
@@ -30,7 +33,9 @@ const StudySection = () => {
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
-          className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+          className={`text-center mb-16 ${
+            isVisible ? "animate-fade-in-up" : "opacity-0"
+          }`}
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">
             Education
@@ -42,7 +47,8 @@ const StudySection = () => {
 
         <div className="max-w-4xl mx-auto space-y-8">
           {education.map((edu, index) => {
-            const { ref: itemRef, isVisible: itemVisible } = useScrollAnimation();
+            const { ref: itemRef, isVisible: itemVisible } =
+              useScrollAnimation();
             return (
               <div
                 key={index}
@@ -60,9 +66,15 @@ const StudySection = () => {
                     <h3 className="text-2xl font-display font-bold text-foreground">
                       {edu.degree}
                     </h3>
-                    <p className="text-primary font-medium">{edu.institution}</p>
-                    <p className="text-sm text-muted-foreground">{edu.period}</p>
-                    <p className="text-muted-foreground pt-2">{edu.description}</p>
+                    <p className="text-primary font-medium">
+                      {edu.institution}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {edu.period}
+                    </p>
+                    <p className="text-muted-foreground pt-2">
+                      {edu.description}
+                    </p>
                   </div>
                 </div>
               </div>

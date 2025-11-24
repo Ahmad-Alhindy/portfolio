@@ -2,14 +2,13 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import img from "../../public/myImage.png";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background gradient-mesh">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
           <div
@@ -26,15 +25,16 @@ const Index = () => {
           <div className="space-y-6 animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight text-glow">
               Hi, I'm
-              <span className="gradient-text">Ahmad Alhindy</span>
+              <span className="gradient-text"> Ahmad Alhindy</span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80">
-              Creative Developer & Designer
+              Creative Software Engineer
             </p>
             <p className="text-lg text-muted-foreground max-w-lg">
-              Crafting beautiful digital experiences with modern technologies.
-              Specialized in web development, UI/UX design, and creative
-              solutions.
+              Data Engineering student Mobile & Platform Technologies Based in
+              Sävsjö, I believe:
+              <span className="gradient-text"> Never give up</span>, keep
+              trying, and success will follow.
             </p>
 
             <div className="flex gap-4 pt-4">
@@ -60,19 +60,21 @@ const Index = () => {
 
             <div className="flex gap-4 pt-6">
               <a
-                href="#"
+                href="https://github.com/Ahmad-Alhindy"
+                target="_blank"
                 className="text-muted-foreground hover:text-primary transition-all hover:scale-110 hover-glow"
               >
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/alhindy"
+                target="_blank"
                 className="text-muted-foreground hover:text-primary transition-all hover:scale-110 hover-glow"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="mailto:alhindy.se@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-all hover:scale-110 hover-glow"
               >
                 <Mail className="w-6 h-6" />
@@ -80,7 +82,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Image Placeholder - User will replace this */}
+          {/* Image Placeholder*/}
           <div
             className="relative animate-scale-in"
             style={{
@@ -88,17 +90,17 @@ const Index = () => {
             }}
           >
             <div className="relative aspect-square max-w-md mx-auto">
-              {/* Glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-3xl blur-3xl opacity-40 animate-glow-pulse" />
 
               {/* Image placeholder */}
               <div className="relative rounded-3xl overflow-hidden border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-accent/10 backdrop-blur hover-glow group">
                 <div className="aspect-square flex items-center justify-center">
                   <div className="text-center space-y-4 p-8">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-accent opacity-60 animate-glow-pulse group-hover:scale-110 transition-transform duration-500" />
-                    <p className="text-muted-foreground font-medium">
-                      Replace with your photo
-                    </p>
+                    <img
+                      src={img}
+                      alt="Ahmad Alhindy"
+                      className="w-42 h-42 mx-auto rounded-full bg-gradient-to-br from-primary to-accent opacity-60 animate-glow-pulse group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                 </div>
               </div>
