@@ -4,6 +4,7 @@ import { ArrowLeft, Play, Github } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import project1 from "../../public/project1.mp4";
 import project2 from "../../public/project2.mp4";
+import project3 from "../../public/project3.mp4";
 
 const projectsData = [
   {
@@ -57,30 +58,55 @@ const projectsData = [
     githubUrl: "https://github.com/Ahmad-Alhindy/planning-App",
     features: [
       "Easy and intuitive design",
-  "Light and dark mode support",
-  "Quick and easy appointment creation",
-  "Reusable templates for tasks or events",
-  "Weekly and monthly calendar views",
-  "Timely reminders for events",
+      "Light and dark mode support",
+      "Quick and easy appointment creation",
+      "Reusable templates for tasks or events",
+      "Weekly and monthly calendar views",
+      "Timely reminders for events",
     ],
     technologies: ["Kotlin", "Jetpack Compose", "Room DB"],
   },
   {
     id: "3",
-    title: "Project Three",
-    description: "Full-stack application with real-time features",
+    title: "Advanced artificial intelligence",
+    description:
+      "A web-based AI tool designed to support circular construction by assessing whether lighting products should be reused or discarded. It uses RAG to search and extract relevant online content, and then generates informed answers. Built with a Python backend and a responsive frontend using HTML, CSS, and JavaScript.",
     fullDescription:
-      "A comprehensive full-stack solution featuring real-time collaboration tools. This project demonstrates expertise in both frontend and backend development, with a focus on scalability and user experience.",
-    tags: ["Vue.js", "Firebase", "CSS3"],
-    videoUrl: "/videos/project3.mp4",
-    githubUrl: "#",
+      `As part of a research project conducted at Jönköping University, 
+      a web-based AI system was designed to support sustainable end-of-life (EoL) 
+      management of construction products. The focus was on lighting fixtures, aiming to 
+      determine whether such products should be reused or disposed of based on context-specific information.
+
+      To keep the project lightweight and beginner-friendly, advanced features such as 
+      castlingThe core system employed a Retrieval-Augmented Generation (RAG) architecture 
+      that automatically retrieved relevant web content and academic sources in real time. 
+      A custom interface allowed users to submit natural language questions, which were then 
+      processed by a backend implemented in Python. The retrieved content was parsed and analyzed 
+      to provide evidence-based answers regarding reuse potential. A frontend was developed using HTML,
+      CSS, and JavaScript to facilitate interaction.
+
+      One technical limitation encountered was the inability to process image-based documents, such as PDFs 
+      containing visual elements. Despite this, the prototype successfully demonstrated the ability to fetch and 
+      filter relevant text-based data to generate responses.
+
+      The project contributed to research on circular construction by showcasing how AI-driven tools can support 
+      decision-making in real-world reuse scenarios. Key technologies involved included RAG frameworks for natural 
+      language processing, browser-based search functionality, and modular Python backend development. The system also 
+      highlighted the importance of interdisciplinary approaches that combine technical implementation with sustainability goals.
+
+      For more details you can check read me file in github if you click on the source code.`,
+    tags: ["javascript", "HTML", "CSS", "Python", "RAG"],
+    videoUrl: project3,
+    githubUrl: "https://github.com/End-of-life-LLM/End-Of-Life-LLM",
     features: [
-      "Real-time collaboration",
-      "Cloud storage",
-      "User management",
-      "Analytics dashboard",
+      "RAG-powered real-time search",
+      "Evidence-based reuse assessment",
+      "Natural language question handling",
+      "Web content parsing and filtering",
+      "Sustainability-focused analysis",
+      "Real-time Search Execution",
     ],
-    technologies: ["Vue.js 3", "Firebase", "CSS3", "WebSockets"],
+    technologies: ["javascript", "HTML", "CSS", "Python", "RAG"],
   },
 ];
 

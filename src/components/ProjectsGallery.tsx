@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import img from "../../public/chess.png";
 import img1 from "../../public/planningApp.png";
-
+import img2 from "../../public/LLM.png";
 
 
 const projects = [
@@ -20,8 +20,6 @@ const projects = [
       "Game Development",
       "Project Planning",
     ],
-    videoUrl: "/videos/project2.mp4",
-
     githubUrl: "https://github.com/Ahmad-Alhindy/Chess",
   },
   {
@@ -31,17 +29,15 @@ const projects = [
       "A smart planning app that helps you organize your schedule with ease. Save reusable templates for tasks or appointments and select them multiple times as needed. View your plans in both weekly and monthly formats, and switch between light and dark mode.",
     image: img1,
     tags: ["Kotlin", "Jetpack Compose", "Room DB"],
-    videoUrl: "/videos/project2.mp4",
     githubUrl: "https://github.com/Ahmad-Alhindy/planning-App",
   },
   {
     id: "3",
-    title: "Project Three",
-    description: "Full-stack application with real-time features",
-    image: "placeholder",
-    tags: ["Vue.js", "Firebase", "CSS3"],
-    videoUrl: "/videos/project3.mp4",
-    githubUrl: "#",
+    title: "Advanced artificial intelligence",
+    description: "A web-based AI tool designed to support circular construction by assessing whether lighting products should be reused or discarded. It uses RAG to search and extract relevant online content, and then generates informed answers. Built with a Python backend and a responsive frontend using HTML, CSS, and JavaScript.",
+    image: img2,
+    tags: ["javascript", "HTML", "CSS", "Python", "RAG"],
+    githubUrl: "https://github.com/End-of-life-LLM/End-Of-Life-LLM",
   },
 ];
 const ProjectsGallery = () => {
