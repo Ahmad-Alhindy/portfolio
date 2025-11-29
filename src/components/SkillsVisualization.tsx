@@ -2,15 +2,28 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useEffect, useState } from "react";
 
 const skills = [
-  { name: "React / Next.js", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "Node.js", level: 85 },
-  { name: "UI/UX Design", level: 88 },
-  { name: "Tailwind CSS", level: 92 },
-  { name: "Python", level: 80 },
+  { name: "Team Player", level: 95 },
+  { name: "Planning", level: 90 },
+  { name: "Curiosity", level: 85 },
+  { name: "Sociability", level: 88 },
+  { name: "Self-motivation", level: 92 },
+  { name: "Patience", level: 95 },
+  { name: "Honesty", level: 100 },
+  { name: "Openness", level: 81 },
+  { name: "Problem-solving", level: 93 },
+  { name: "Time management", level: 96 },
+  { name: "Adaptability", level: 89 },
 ];
 
-const SkillBar = ({ name, level, delay }: { name: string; level: number; delay: number }) => {
+const SkillBar = ({
+  name,
+  level,
+  delay,
+}: {
+  name: string;
+  level: number;
+  delay: number;
+}) => {
   const { ref, isVisible } = useScrollAnimation();
   const [width, setWidth] = useState(0);
 
@@ -46,7 +59,9 @@ const SkillsVisualization = () => {
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
-          className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+          className={`text-center mb-16 ${
+            isVisible ? "animate-fade-in-up" : "opacity-0"
+          }`}
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">
             Skills & Expertise
