@@ -11,7 +11,14 @@ const projects = [
     description:
       "A basic chess game for two local players with standard piece movement. Advanced rules like castling and promotion are excluded to keep it simple and focused on core gameplay.",
     image: img,
-    tags: ["Java", "Object Oriented Programming", "Game Development", "Project Planning"],
+    tags: [
+      "Java",
+      "Object Oriented Programming",
+      "Game Development",
+      "Project Planning",
+    ],
+    videoUrl: "/videos/project2.mp4",
+
     githubUrl: "https://github.com/Ahmad-Alhindy/Chess",
   },
   {
@@ -20,6 +27,7 @@ const projects = [
     description: "Mobile-first responsive design with smooth animations",
     image: "placeholder",
     tags: ["Next.js", "Node.js", "MongoDB"],
+    videoUrl: "/videos/project2.mp4",
     githubUrl: "#",
   },
   {
@@ -28,6 +36,7 @@ const projects = [
     description: "Full-stack application with real-time features",
     image: "placeholder",
     tags: ["Vue.js", "Firebase", "CSS3"],
+    videoUrl: "/videos/project3.mp4",
     githubUrl: "#",
   },
 ];

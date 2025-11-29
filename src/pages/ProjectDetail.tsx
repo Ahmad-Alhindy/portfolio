@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, Play, Github } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import chess from "../../public/chess.png";
+import project1 from "../../public/project1.mp4";
 
 const projectsData = [
   {
@@ -21,8 +22,13 @@ const projectsData = [
      The game ends when one player captures the opponent's king. This project demonstrates a clear understanding of 
      game state management, input handling, and rule-based logic implementation.`,
     image: chess,
-    tags: ["Java", "Object Oriented Programming", "Game Development", "Project Planning"],
-    liveUrl: "https://youtube.com/shorts/A2EQ2krkE10?feature=share",
+    tags: [
+      "Java",
+      "Object Oriented Programming",
+      "Game Development",
+      "Project Planning",
+    ],
+    videoUrl: project1,
     githubUrl: "https://github.com/Ahmad-Alhindy/Chess",
     features: [
       "Move validation",
@@ -40,7 +46,7 @@ const projectsData = [
       "A mobile-first application that prioritizes user experience across all devices. Built with performance in mind, featuring smooth animations and transitions that enhance the overall feel of the application.",
     image: "placeholder",
     tags: ["Next.js", "Node.js", "MongoDB"],
-    liveUrl: "#",
+    videoUrl: "/videos/project2.mp4",
     githubUrl: "#",
     features: [
       "Mobile-first design",
@@ -58,7 +64,7 @@ const projectsData = [
       "A comprehensive full-stack solution featuring real-time collaboration tools. This project demonstrates expertise in both frontend and backend development, with a focus on scalability and user experience.",
     image: "placeholder",
     tags: ["Vue.js", "Firebase", "CSS3"],
-    liveUrl: "#",
+    videoUrl: "/videos/project3.mp4",
     githubUrl: "#",
     features: [
       "Real-time collaboration",
@@ -135,7 +141,6 @@ const ProjectDetail = () => {
             </div>
 
             <div className="flex gap-4">
-          
               <Button
                 variant="outline"
                 className="border-primary/50 hover:border-primary"
@@ -153,20 +158,25 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          {/* Project Image */}
+          {/* Video Demo */}
           <div
-            className="mb-12 animate-scale-in"
+            className="mb-12 animate-scale-in max-w-md mx-auto"
             style={{ animationDelay: "0.2s" }}
           >
-            <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-primary/30 bg-gradient-to-br from-primary/20 to-accent/20 hover-glow">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                   <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-              </div>
+            <div className="relative aspect-video rounded-2xl border-2 border-primary/30 bg-card/50 backdrop-blur hover-glow">
+              <video
+                src={project.videoUrl}
+                controls
+                className="w-fullh-full object-cover"
+                poster="/placeholder.svg"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
+            <p className="text-sm text-muted-foreground mt-3 text-center flex items-center justify-center gap-2">
+              <Play className="w-4 h-4" />
+              Watch the video demo to see the project in action
+            </p>
           </div>
 
           {/* Project Details */}
