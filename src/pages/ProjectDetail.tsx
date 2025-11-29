@@ -2,8 +2,8 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Play, Github } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
-import chess from "../../public/chess.png";
 import project1 from "../../public/project1.mp4";
+import project2 from "../../public/project2.mp4";
 
 const projectsData = [
   {
@@ -21,7 +21,6 @@ const projectsData = [
      advanced features such as castling, en passant, pawn promotion are not included. 
      The game ends when one player captures the opponent's king. This project demonstrates a clear understanding of 
      game state management, input handling, and rule-based logic implementation.`,
-    image: chess,
     tags: [
       "Java",
       "Object Oriented Programming",
@@ -40,21 +39,31 @@ const projectsData = [
   },
   {
     id: "2",
-    title: "Project Two",
-    description: "Mobile-first responsive design with smooth animations",
-    fullDescription:
-      "A mobile-first application that prioritizes user experience across all devices. Built with performance in mind, featuring smooth animations and transitions that enhance the overall feel of the application.",
-    image: "placeholder",
-    tags: ["Next.js", "Node.js", "MongoDB"],
-    videoUrl: "/videos/project2.mp4",
-    githubUrl: "#",
+    title: "Planning App",
+    description:
+      "A smart planning app that helps you organize your schedule with ease. Save reusable templates for tasks or appointments and select them multiple times as needed. View your plans in both weekly and monthly formats, and switch between light and dark mode.",
+    fullDescription: `This Android planning app is designed to help users manage their time 
+    efficiently by combining flexibility, clarity, and ease of use. At its core, the app allows 
+    users to create and save custom templates for common tasks or appointments. 
+    These templates can be reused multiple times, reducing the need for repeated manual input when scheduling recurring events.
+    The app offers both weekly and monthly calendar views, enabling users to get a clear overview of 
+    their short-term and long-term schedules. Each appointment or task can be added, or deleted with a simple and intuitive interface.
+    To enhance the user experience, the app includes support for light and dark mode, adapting to user preferences and system settings. 
+    Users also receive timely reminders — one 15 minutes before and another 1 day before each scheduled event — helping them stay prepared and organized.
+    Whether you're planning work tasks, personal goals, or recurring activities, this app provides a structured yet flexible environment for keeping track 
+    of what matters most.`,
+    tags: ["Kotlin", "Jetpack Compose", "Room DB"],
+    videoUrl: project2,
+    githubUrl: "https://github.com/Ahmad-Alhindy/planning-App",
     features: [
-      "Mobile-first design",
-      "Smooth animations",
-      "Performance optimized",
-      "SEO friendly",
+      "Easy and intuitive design",
+  "Light and dark mode support",
+  "Quick and easy appointment creation",
+  "Reusable templates for tasks or events",
+  "Weekly and monthly calendar views",
+  "Timely reminders for events",
     ],
-    technologies: ["Next.js 14", "Node.js", "MongoDB", "Express"],
+    technologies: ["Kotlin", "Jetpack Compose", "Room DB"],
   },
   {
     id: "3",
@@ -62,7 +71,6 @@ const projectsData = [
     description: "Full-stack application with real-time features",
     fullDescription:
       "A comprehensive full-stack solution featuring real-time collaboration tools. This project demonstrates expertise in both frontend and backend development, with a focus on scalability and user experience.",
-    image: "placeholder",
     tags: ["Vue.js", "Firebase", "CSS3"],
     videoUrl: "/videos/project3.mp4",
     githubUrl: "#",
@@ -167,7 +175,7 @@ const ProjectDetail = () => {
               <video
                 src={project.videoUrl}
                 controls
-                className="w-fullh-full object-cover"
+                className="w-full object-cover"
                 poster="/placeholder.svg"
               >
                 Your browser does not support the video tag.

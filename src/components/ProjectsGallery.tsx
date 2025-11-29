@@ -3,6 +3,9 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import img from "../../public/chess.png";
+import img1 from "../../public/planningApp.png";
+
+
 
 const projects = [
   {
@@ -23,12 +26,13 @@ const projects = [
   },
   {
     id: "2",
-    title: "Project Two",
-    description: "Mobile-first responsive design with smooth animations",
-    image: "placeholder",
-    tags: ["Next.js", "Node.js", "MongoDB"],
+    title: "Planning App",
+    description:
+      "A smart planning app that helps you organize your schedule with ease. Save reusable templates for tasks or appointments and select them multiple times as needed. View your plans in both weekly and monthly formats, and switch between light and dark mode.",
+    image: img1,
+    tags: ["Kotlin", "Jetpack Compose", "Room DB"],
     videoUrl: "/videos/project2.mp4",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Ahmad-Alhindy/planning-App",
   },
   {
     id: "3",
@@ -60,7 +64,7 @@ const ProjectsGallery = () => {
               <div
                 key={index}
                 ref={ref}
-                className={`group relative rounded-2xl overflow-hidden bg-card/50 backdrop-blur border border-primary/20 hover:border-primary/50 transition-all hover-glow ${
+                className={`group relative rounded-2xl overflow-hidden bg-card/50 backdrop-blur border border-primary/20 hover:border-primary/50 transition-all hover-glow flex flex-col ${
                   isVisible ? "animate-fade-in-up" : "opacity-0"
                 }`}
                 style={{
@@ -68,17 +72,17 @@ const ProjectsGallery = () => {
                 }}
               >
                 {/* Project Image */}
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 group-hover:scale-110 transition-transform duration-500" />
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
                 {/* Project Info */}
-                <div className="p-6 space-y-4">
+                <div className="p-6 space-y-4 mt-auto">
                   <Link to={`/projects/${project.id}`}>
                     <h3 className="text-2xl font-display font-bold text-foreground hover:text-primary transition-colors cursor-pointer">
                       {project.title}
