@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import img from "../../public/myImage.png";
+import img from "../../public/personal_image1.jpeg";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background gradient-mesh">

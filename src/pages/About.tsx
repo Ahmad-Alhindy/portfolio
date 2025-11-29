@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Blocks, Zap, Database, Download } from "lucide-react";
 import StudySection from "@/components/StudySection";
+import SkillsVisualization from "@/components/SkillsVisualization";
+import img from "../../public/personal_image2.jpeg";
 
 const About = () => {
   const skills = [
@@ -15,8 +17,7 @@ const About = () => {
     {
       icon: Blocks,
       title: "Architecture",
-      description:
-        "Designing scalable and maintainable system architectures",
+      description: "Designing scalable and maintainable system architectures",
     },
     {
       icon: Zap,
@@ -27,7 +28,8 @@ const About = () => {
     {
       icon: Database,
       title: "Database",
-      description: "Experienced in designing and managing databases for robust applications",
+      description:
+        "Experienced in designing and managing databases for robust applications",
     },
   ];
 
@@ -82,12 +84,13 @@ const About = () => {
               style={{ animationDelay: "0.2s" }}
             >
               <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 flex items-center justify-center hover-glow overflow-hidden group">
-                <div className="text-center p-8">
-                  <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-primary to-accent opacity-60 mb-4 animate-glow-pulse group-hover:scale-110 transition-transform duration-500" />
-                  <p className="text-muted-foreground">
-                    Another photo placeholder
-                  </p>
-                </div>
+                 <div className="text-center space-y-4 p-8">
+                    <img
+                      src={img}
+                      alt="Ahmad Alhindy"
+                      className="w-42 h-42 mx-auto rounded-full bg-gradient-to-br from-primary to-accent opacity-60 animate-glow-pulse group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
               </div>
             </div>
           </div>
@@ -179,6 +182,9 @@ const About = () => {
       </div>
 
       <StudySection />
+      <div className="relative z-10 pt-32 pb-20">
+        <SkillsVisualization />
+      </div>
     </div>
   );
 };
