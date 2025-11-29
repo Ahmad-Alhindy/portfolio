@@ -2,41 +2,26 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Briefcase } from "lucide-react";
 
 const experiences = [
+{
+  title: "Taxi Driver",
+  company: "Telepass AB",
+  period: "2020–Present",
+  description:
+    "Part-time taxi driver that I still maintain alongside my studies. I think it is a great opportunity to meet new people and learn from different experiences.",
+},
   {
-    title: "Senior Frontend Developer",
-    company: "Tech Company Inc.",
-    period: "2023 - Present",
-    description:
-      "Leading frontend development team, architecting scalable React applications, and mentoring junior developers.",
-    achievements: [
-      "Improved app performance by 40%",
-      "Led migration to TypeScript",
-      "Implemented CI/CD pipeline",
-    ],
+   title: "Machine Operator",
+  company: "Skruf Snus AB",
+  period: "2018 - 2023",
+  description:
+    "I was responsible for overseeing multiple stations and performing various tasks related to production and machinery maintenance.",
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Agency",
-    period: "2021 - 2023",
+    title: "CNC Operator",
+    company: "Trelleborg Wheels AB",
+    period: "2017 - 2018",
     description:
-      "Developed and maintained multiple client projects using modern web technologies.",
-    achievements: [
-      "Built 20+ responsive websites",
-      "Reduced load times by 50%",
-      "Trained 5 junior developers",
-    ],
-  },
-  {
-    title: "Junior Web Developer",
-    company: "Startup Studio",
-    period: "2020 - 2021",
-    description:
-      "Collaborated with design team to create engaging user interfaces and interactive experiences.",
-    achievements: [
-      "Created reusable component library",
-      "Implemented responsive designs",
-      "Contributed to open-source projects",
-    ],
+      "I was responsible for programming and operating multiple CNC machines.",
   },
 ];
 
@@ -94,20 +79,7 @@ const WorkExperience = () => {
                     <p className="text-muted-foreground mb-4">{exp.description}</p>
 
                     <div className="space-y-2">
-                      <p className="text-sm font-semibold text-foreground">
-                        Key Achievements:
-                      </p>
-                      <ul className="space-y-1">
-                        {exp.achievements.map((achievement, i) => (
-                          <li
-                            key={i}
-                            className="text-sm text-muted-foreground flex items-center gap-2"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
+                     
                     </div>
                   </div>
                 </div>
