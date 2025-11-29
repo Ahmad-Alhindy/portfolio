@@ -2,25 +2,35 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
+import chess from "../../public/chess.png";
 
 const projectsData = [
   {
     id: "1",
-    title: "Project One",
-    description: "A modern web application with cutting-edge features",
-    fullDescription:
-      "This project showcases a full-stack web application built with modern technologies. It features real-time updates, responsive design, and seamless user experience. The application handles complex data flows and provides an intuitive interface for users.",
-    image: "placeholder",
-    tags: ["React", "TypeScript", "Tailwind"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Chess Game",
+    description:
+      "A basic chess game for two local players with standard piece movement. Advanced rules like castling and promotion are excluded to keep it simple and focused on core gameplay.",
+
+    fullDescription: `This is a basic chess game designed for two players to play locally on the same device. 
+    It features a standard 8x8 board and supports basic movement rules for all pieces, 
+    allowing players to take turns entering moves.
+     The focus of the project was on implementing the core mechanics of chess, 
+     including turn management and piece validation. 
+     To keep the project lightweight and beginner-friendly, 
+     advanced features such as castling, en passant, pawn promotion are not included. 
+     The game ends when one player captures the opponent's king. This project demonstrates a clear understanding of 
+     game state management, input handling, and rule-based logic implementation.`,
+    image: chess,
+    tags: ["Java", "Object Oriented Programming", "Game Development", "Project Planning"],
+    liveUrl: "https://youtube.com/shorts/A2EQ2krkE10?feature=share",
+    githubUrl: "https://github.com/Ahmad-Alhindy/Chess",
     features: [
-      "Real-time updates",
-      "Responsive design",
-      "User authentication",
-      "Advanced data visualization",
+      "Move validation",
+      "Interactive board",
+      "Clean and simple UI",
+      "Turn-based gameplay",
     ],
-    technologies: ["React 18", "TypeScript", "Tailwind CSS", "Vite"],
+    technologies: ["Java", "Object Oriented Programming"],
   },
   {
     id: "2",
@@ -125,19 +135,7 @@ const ProjectDetail = () => {
             </div>
 
             <div className="flex gap-4">
-              <Button
-                className="hover-glow bg-gradient-to-r from-primary to-accent border-0"
-                asChild
-              >
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="mr-2" />
-                  Live Demo
-                </a>
-              </Button>
+          
               <Button
                 variant="outline"
                 className="border-primary/50 hover:border-primary"
@@ -162,9 +160,11 @@ const ProjectDetail = () => {
           >
             <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-primary/30 bg-gradient-to-br from-primary/20 to-accent/20 hover-glow">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <p className="text-muted-foreground text-lg">
-                  Project Screenshot
-                </p>
+                   <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
               </div>
             </div>
           </div>
