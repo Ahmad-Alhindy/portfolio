@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -17,31 +18,52 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    emailjs
+      .send(
+        "service_fx24i5u",
+        "template_m4fvyfb",
+        {
+          name: formData.name,
+          email: formData.email, // <-- this will appear in the template
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        "iP4WOHng8XWwvRkbG"
+      )
+      .then(() => {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((err) => {
+        toast({
+          title: "Error sending message",
+          description: "Something went wrong. Please try again.",
+        });
+        console.error(err);
+      });
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      value: "hello@yourname.com",
-      href: "mailto:hello@yourname.com",
+      value: "Alhindy.se@gmail.com",
+      href: "mailto:Alhindy.se@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+46 72 430 4217",
+      href: "tel:+46724304217",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
-      href: "#",
+      value: "Sävsjö, Sweden",
+      href: "https://www.google.com/maps/place/Sävsjö,+Sweden",
     },
   ];
 
@@ -86,6 +108,7 @@ const Contact = () => {
                     </label>
                     <Input
                       id="name"
+                      name="name"
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(e) =>
@@ -108,6 +131,7 @@ const Contact = () => {
                     </label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="your@email.com"
                       value={formData.email}
@@ -131,6 +155,7 @@ const Contact = () => {
                     </label>
                     <Textarea
                       id="message"
+                      name="massage"
                       placeholder="Tell me about your project..."
                       rows={6}
                       value={formData.message}
