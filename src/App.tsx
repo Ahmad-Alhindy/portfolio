@@ -8,12 +8,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
-import Skills from "./pages/Skills";
 import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
 
+/*firebase deploy --only hosting:portfolioV2 to deploy it  */
+
+const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
