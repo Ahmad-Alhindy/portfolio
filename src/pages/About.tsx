@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Code, Blocks, Zap, Database, Download } from "lucide-react";
 import StudySection from "@/components/StudySection";
 import SkillsVisualization from "@/components/SkillsVisualization";
-import img from "../../public/personal_image2.jpeg";
 
 const About = () => {
   const skills = [
@@ -86,7 +85,7 @@ const About = () => {
               <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 flex items-center justify-center hover-glow overflow-hidden group">
                  <div className="text-center space-y-4 p-8">
                     <img
-                      src={img}
+                      src="/personal_image2.jpeg"
                       alt="Ahmad Alhindy"
                       className="w-42 h-42 mx-auto rounded-full bg-gradient-to-br from-primary to-accent opacity-60 animate-glow-pulse group-hover:scale-110 transition-transform duration-500"
                     />

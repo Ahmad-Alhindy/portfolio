@@ -2,19 +2,26 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Briefcase } from "lucide-react";
 
 const experiences = [
-{
-  title: "Taxi Driver",
-  company: "Telepass AB",
-  period: "2020–Present",
-  description:
-    "Part-time taxi driver that I still maintain alongside my studies. I think it is a great opportunity to meet new people and learn from different experiences.",
-},
   {
-   title: "Machine Operator",
-  company: "Skruf Snus AB",
-  period: "2018 - 2023",
-  description:
-    "I was responsible for overseeing multiple stations and performing various tasks related to production and machinery maintenance.",
+    title: "Taxi Driver",
+    company: "Telepass AB",
+    period: "2020 - Present",
+    description:
+      "Part-time taxi driver that I still maintain alongside my studies. I think it is a great opportunity to meet new people and learn from different experiences.",
+  },
+  {
+    title: "Lab Assistant",
+    company: "Jönköping University",
+    period: "2025",
+    description:
+      "Hired as a lab assistant for two courses: Web Development Fundamentals and Object-Oriented Programming. Responsibilities included helping students with assignments, answering questions, and providing support during lab sessions.",
+  },
+  {
+    title: "Machine Operator",
+    company: "Skruf Snus AB",
+    period: "2018 - 2023",
+    description:
+      "I was responsible for overseeing multiple stations and performing various tasks related to production and machinery maintenance.",
   },
   {
     title: "CNC Operator",
@@ -33,7 +40,9 @@ const WorkExperience = () => {
       <div className="max-w-7xl mx-auto">
         <div
           ref={ref}
-          className={`text-center mb-16 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+          className={`text-center mb-16 ${
+            isVisible ? "animate-fade-in-up" : "opacity-0"
+          }`}
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">
             Work Experience
@@ -49,7 +58,8 @@ const WorkExperience = () => {
 
           <div className="space-y-12">
             {experiences.map((exp, index) => {
-              const { ref: itemRef, isVisible: itemVisible } = useScrollAnimation();
+              const { ref: itemRef, isVisible: itemVisible } =
+                useScrollAnimation();
               return (
                 <div
                   key={index}
@@ -71,16 +81,20 @@ const WorkExperience = () => {
                         <h3 className="text-2xl font-display font-bold text-foreground">
                           {exp.title}
                         </h3>
-                        <p className="text-primary font-medium">{exp.company}</p>
-                        <p className="text-sm text-muted-foreground">{exp.period}</p>
+                        <p className="text-primary font-medium">
+                          {exp.company}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {exp.period}
+                        </p>
                       </div>
                     </div>
 
-                    <p className="text-muted-foreground mb-4">{exp.description}</p>
+                    <p className="text-muted-foreground mb-4">
+                      {exp.description}
+                    </p>
 
-                    <div className="space-y-2">
-                     
-                    </div>
+                    <div className="space-y-2"></div>
                   </div>
                 </div>
               );

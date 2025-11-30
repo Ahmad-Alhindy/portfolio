@@ -2,9 +2,6 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Play, Github } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
-import project1 from "../../public/project1.mp4";
-import project2 from "../../public/project2.mp4";
-import project3 from "../../public/project3.mp4";
 
 const projectsData = [
   {
@@ -28,7 +25,7 @@ const projectsData = [
       "Game Development",
       "Project Planning",
     ],
-    videoUrl: project1,
+    videoUrl: "/project1.mp4",
     githubUrl: "https://github.com/Ahmad-Alhindy/Chess",
     features: [
       "Move validation",
@@ -54,7 +51,7 @@ const projectsData = [
     Whether you're planning work tasks, personal goals, or recurring activities, this app provides a structured yet flexible environment for keeping track 
     of what matters most.`,
     tags: ["Kotlin", "Jetpack Compose", "Room DB"],
-    videoUrl: project2,
+    videoUrl: "/project2.mp4",
     githubUrl: "https://github.com/Ahmad-Alhindy/planning-App",
     features: [
       "Easy and intuitive design",
@@ -96,7 +93,7 @@ const projectsData = [
 
       For more details you can check read me file in github if you click on the source code.`,
     tags: ["javascript", "HTML", "CSS", "Python", "RAG"],
-    videoUrl: project3,
+    videoUrl: "/project3.mp4",
     githubUrl: "https://github.com/End-of-life-LLM/End-Of-Life-LLM",
     features: [
       "RAG-powered real-time search",

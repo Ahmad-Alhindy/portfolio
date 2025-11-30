@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import img from "../../public/personal_image1.jpeg";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background gradient-mesh">
@@ -97,7 +96,7 @@ const Index = () => {
                 <div className="aspect-square flex items-center justify-center">
                   <div className="text-center space-y-4 p-8">
                     <img
-                      src={img}
+                      src="/personal_image1.jpeg"
                       alt="Ahmad Alhindy"
                       className="w-42 h-42 mx-auto rounded-full bg-gradient-to-br from-primary to-accent opacity-60 animate-glow-pulse group-hover:scale-110 transition-transform duration-500"
                     />

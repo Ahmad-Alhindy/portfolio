@@ -2,9 +2,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import img from "../../public/chess.png";
-import img1 from "../../public/planningApp.png";
-import img2 from "../../public/LLM.png";
+
 
 
 const projects = [
@@ -13,7 +11,7 @@ const projects = [
     title: "Chess Game",
     description:
       "A basic chess game for two local players with standard piece movement. Advanced rules like castling and promotion are excluded to keep it simple and focused on core gameplay.",
-    image: img,
+    image: "/chess.png",
     tags: [
       "Java",
       "Object Oriented Programming",
@@ -27,7 +25,7 @@ const projects = [
     title: "Planning App",
     description:
       "A smart planning app that helps you organize your schedule with ease. Save reusable templates for tasks or appointments and select them multiple times as needed. View your plans in both weekly and monthly formats, and switch between light and dark mode.",
-    image: img1,
+    image: "/planningApp.png",
     tags: ["Kotlin", "Jetpack Compose", "Room DB"],
     githubUrl: "https://github.com/Ahmad-Alhindy/planning-App",
   },
@@ -35,7 +33,7 @@ const projects = [
     id: "3",
     title: "Advanced artificial intelligence",
     description: "A web-based AI tool designed to support circular construction by assessing whether lighting products should be reused or discarded. It uses RAG to search and extract relevant online content, and then generates informed answers. Built with a Python backend and a responsive frontend using HTML, CSS, and JavaScript.",
-    image: img2,
+    image: "/LLM.png",
     tags: ["javascript", "HTML", "CSS", "Python", "RAG"],
     githubUrl: "https://github.com/End-of-life-LLM/End-Of-Life-LLM",
   },
