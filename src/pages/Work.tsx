@@ -4,7 +4,6 @@ import WorkExperience from "@/components/WorkExperience";
 const Work = () => {
   return (
     <div className="min-h-screen bg-background gradient-mesh">
-      <Navigation />
 
       {/* Animated Background Elements */}
       <div className="fixed inset-0 z-0 pointer-events-none">

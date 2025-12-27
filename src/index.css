@@ -8,29 +8,28 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 3%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 7%;
+    --background:15 50% 20%;   /*the background color*/
+    --foreground: 0 0% 95%;
+    --card: 15 20% 12%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 7%;
+    --popover: 15 20% 12%;
     --popover-foreground: 0 0% 98%;
-    --primary: 280 90% 68%;
+    --primary: 0 70% 45%; 
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 10% 12%;
+    --secondary: 15 15% 16%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 10% 12%;
-    --muted-foreground: 240 5% 64%;
-    --accent: 195 92% 62%;
+    --muted: 15 15% 16%;
+    --muted-foreground: 15 10% 75%;
+    --accent: 0 65% 50%; 
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 10% 15%;
-    --input: 240 10% 15%;
-    --ring: 280 90% 68%;
+    --border: 15 15% 20%;
+    --input: 15 15% 20%;
+    --ring: 10 70% 45%;
     --radius: 0.75rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(280 90% 68%), hsl(195 92% 62%));
-    --gradient-accent: linear-gradient(135deg, hsl(280 90% 68%), hsl(330 90% 65%));
+    --gradient-primary: linear-gradient(135deg, hsl(0, 71%, 49%), hsl(351, 46%, 29%));
     --gradient-hero: linear-gradient(135deg, hsl(280 90% 68% / 0.15), hsl(195 92% 62% / 0.15));
     --gradient-mesh: radial-gradient(at 0% 0%, hsl(280 90% 68% / 0.2) 0px, transparent 50%),
                      radial-gradient(at 100% 0%, hsl(195 92% 62% / 0.2) 0px, transparent 50%),
@@ -54,24 +53,24 @@ All colors MUST be HSL.
     --foreground: 240 10% 10%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 10%;
-    --popover: 0 0% 100%;
+    --popover: 15 20% 12%;
     --popover-foreground: 240 10% 10%;
-    --primary: 280 90% 68%;
+    --primary: 0 70% 45%; /* red-brown */
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 5% 96%;
+    --secondary: 15 15% 16%;
     --secondary-foreground: 240 10% 10%;
-    --muted: 240 5% 96%;
+    --muted: 15 15% 16%;
     --muted-foreground: 240 4% 46%;
-    --accent: 195 92% 62%;
+    --accent: 0 65% 50%; /* warm brown */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 280 90% 68%;
+    --border: 15 15% 20%;
+    --input: 15 15% 20%;
+    --ring: 10 70% 45%;
     --radius: 0.75rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(280 90% 68%), hsl(195 92% 62%));
+    --gradient-primary: linear-gradient(135deg, hsl(0, 71%, 49%), hsl(351, 46%, 29%));
     --gradient-accent: linear-gradient(135deg, hsl(280 90% 68%), hsl(330 90% 65%));
     --gradient-hero: linear-gradient(135deg, hsl(280 90% 68% / 0.1), hsl(195 92% 62% / 0.1));
     --gradient-mesh: radial-gradient(at 0% 0%, hsl(280 90% 68% / 0.1) 0px, transparent 50%),
@@ -109,8 +108,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
+    color: red;
   }
   
   .hover-glow {

@@ -34,7 +34,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background gradient-mesh">
-      <Navigation />
 
       <div className="pt-32 pb-20 px-6 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -161,6 +160,11 @@ const About = () => {
               <h2 className="text-3xl font-display font-bold mb-4 gradient-text">
                 Download My Resume
               </h2>
+              <img
+                src="/CV.png"
+                alt="Resume Preview"
+                className="mx-auto mb-6 rounded-lg border border-primary/20 shadow-lg"
+              />
               <Button
                 asChild
                 size="lg"

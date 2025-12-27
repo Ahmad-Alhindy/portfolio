@@ -128,7 +128,6 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-background gradient-mesh">
-      <Navigation />
 
       {/* Animated Background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
@@ -164,7 +163,7 @@ const ProjectDetail = () => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/30"
+                  className="px-4 py-2 rounded-full bg-primary/80 text-primary-foreground border border-primary/30"
                 >
                   {tag}
                 </span>

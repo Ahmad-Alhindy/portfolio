@@ -46,7 +46,7 @@ const ProjectsGallery = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">
             Projects
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-foreground text-lg">
             Check out some of my recent work
           </p>
         </div>
@@ -89,7 +89,7 @@ const ProjectsGallery = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/30"
+                        className="px-3 py-1 text-sm rounded-full bg-primary/80 text-primary-foreground border border-primary/30"
                       >
                         {tag}
                       </span>

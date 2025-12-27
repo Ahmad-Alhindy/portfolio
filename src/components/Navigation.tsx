@@ -29,7 +29,7 @@ const Navigation = () => {
               <NavLink
                 key={item.to}
                 to={item.to}
-                className="text-foreground/70 hover:text-primary transition-all font-medium hover:scale-110"
+                className="text-foreground hover:text-primary transition-all font-medium hover:scale-110"
                 activeClassName="text-primary font-semibold"
               >
                 {item.label}

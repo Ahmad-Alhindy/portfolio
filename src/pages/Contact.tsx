@@ -69,7 +69,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background gradient-mesh">
-      <Navigation />
 
       <div className="pt-32 pb-20 px-6 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -170,7 +169,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full hover-glow bg-gradient-to-r from-primary to-accent border-0 group animate-fade-in-up"
+                    className="w-full hover-glow bg-gradient-to-r from-primary border-0 group animate-fade-in-up"
                     style={{ animationDelay: "0.4s" }}
                   >
                     Send Message
