@@ -3,8 +3,6 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-
-
 const projects = [
   {
     id: "1",
@@ -32,10 +30,20 @@ const projects = [
   {
     id: "3",
     title: "Advanced artificial intelligence",
-    description: "A web-based AI tool designed to support circular construction by assessing whether lighting products should be reused or discarded. It uses RAG to search and extract relevant online content, and then generates informed answers. Built with a Python backend and a responsive frontend using HTML, CSS, and JavaScript.",
+    description:
+      "A web-based AI tool designed to support circular construction by assessing whether lighting products should be reused or discarded. It uses RAG to search and extract relevant online content, and then generates informed answers. Built with a Python backend and a responsive frontend using HTML, CSS, and JavaScript.",
     image: "/LLM.png",
     tags: ["javascript", "HTML", "CSS", "Python", "RAG"],
     githubUrl: "https://github.com/End-of-life-LLM/End-Of-Life-LLM",
+  },
+  {
+    id: "4",
+    title: "Crazy Salon Website",
+    description:
+      "A full-stack website developed for a hair and beauty salon. The platform allows customers to explore services, view salon information, and easily book appointments online. Built with a modern React frontend and a Node.js backend to provide a responsive and efficient user experience.",
+    image: "/crazySalon.png",
+    tags: ["React", "Node.js", "JavaScript", "HTML", "CSS"],
+    githubUrl: "",
   },
 ];
 const ProjectsGallery = () => {
@@ -109,21 +117,23 @@ const ProjectsGallery = () => {
                         View Details
                       </Link>
                     </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-primary/50 hover:border-primary group/btn"
-                      asChild
-                    >
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {project.githubUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-primary/50 hover:border-primary group/btn"
+                        asChild
                       >
-                        <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                        Code
-                      </a>
-                    </Button>
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>

@@ -34,6 +34,7 @@ const projectsData = [
       "Turn-based gameplay",
     ],
     technologies: ["Java", "Object Oriented Programming"],
+    url: "",
   },
   {
     id: "2",
@@ -62,14 +63,14 @@ const projectsData = [
       "Timely reminders for events",
     ],
     technologies: ["Kotlin", "Jetpack Compose", "Room DB"],
+    url: "",
   },
   {
     id: "3",
     title: "Advanced artificial intelligence",
     description:
       "A web-based AI tool designed to support circular construction by assessing whether lighting products should be reused or discarded. It uses RAG to search and extract relevant online content, and then generates informed answers. Built with a Python backend and a responsive frontend using HTML, CSS, and JavaScript.",
-    fullDescription:
-      `As part of a research project conducted at Jönköping University, 
+    fullDescription: `As part of a research project conducted at Jönköping University, 
       a web-based AI system was designed to support sustainable end-of-life (EoL) 
       management of construction products. The focus was on lighting fixtures, aiming to 
       determine whether such products should be reused or disposed of based on context-specific information.
@@ -104,6 +105,30 @@ const projectsData = [
       "Real-time Search Execution",
     ],
     technologies: ["javascript", "HTML", "CSS", "Python", "RAG"],
+    url: "",
+  },
+  {
+    id: "4",
+    title: "Crazy Salon Website",
+    description:
+      "A modern full-stack website developed for a hair and beauty salon.",
+    fullDescription: `Crazy Salon is a responsive full-stack web application designed for a hair and beauty salon. 
+     The website allows customers to explore available services, learn about the salon, 
+     and easily book appointments online. The frontend was built using React to create a dynamic and smooth user experience,
+      while the backend uses Node.js to handle server-side logic and data management. 
+      The platform focuses on usability, clean design, and accessibility across different devices.`,
+    tags: ["React", "Node.js", "JavaScript", "HTML", "CSS"],
+    videoUrl: "",
+    githubUrl: "",
+    features: [
+      "Responsive design that works on mobile, tablet, and desktop",
+      "Service listing with detailed information",
+      "Online appointment booking system",
+      "Modern and user-friendly interface",
+      "Fast and dynamic page rendering with React",
+    ],
+    technologies: ["React", "Node.js", "JavaScript", "HTML", "CSS"],
+    url: "https://crazysalon.se",
   },
 ];
 
@@ -128,7 +153,6 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-background gradient-mesh">
-
       {/* Animated Background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
@@ -170,22 +194,24 @@ const ProjectDetail = () => {
               ))}
             </div>
 
-            <div className="flex gap-4">
-              <Button
-                variant="outline"
-                className="border-primary/50 hover:border-primary"
-                asChild
-              >
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            {project.githubUrl && (
+              <div className="flex gap-4">
+                <Button
+                  variant="outline"
+                  className="border-primary/50 hover:border-primary"
+                  asChild
                 >
-                  <Github className="mr-2" />
-                  View Code
-                </a>
-              </Button>
-            </div>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="mr-2" />
+                    View Code
+                  </a>
+                </Button>
+              </div>
+            )}
           </div>
 
           {/* Video Demo */}
@@ -193,19 +219,37 @@ const ProjectDetail = () => {
             className="mb-12 animate-scale-in max-w-md mx-auto"
             style={{ animationDelay: "0.2s" }}
           >
-            <div className="relative aspect-video rounded-2xl border-2 border-primary/30 bg-card/50 backdrop-blur hover-glow">
-              <video
-                src={project.videoUrl}
-                controls
-                className="w-full object-cover"
-                poster="/placeholder.svg"
-              >
-                Your browser does not support the video tag.
-              </video>
+            <div className="relative aspect-video rounded-2xl border-2 border-primary/30 bg-card/50 backdrop-blur hover-glow flex items-center justify-center">
+              {project.videoUrl ? (
+                <video
+                  src={project.videoUrl}
+                  controls
+                  className="w-full object-cover"
+                  poster="/placeholder.svg"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <div className="text-center p-6">
+                  <p className="text-muted-foreground mb-2">
+                    No video demo available for this project.
+                  </p>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:opacity-80"
+                  >
+                    Visit the website to see the project
+                  </a>
+                </div>
+              )}
             </div>
             <p className="text-sm text-muted-foreground mt-3 text-center flex items-center justify-center gap-2">
               <Play className="w-4 h-4" />
-              Watch the video demo to see the project in action
+              {project.videoUrl
+                ? "Watch the video demo to see the project in action"
+                : "You can visit the website to explore the project"}
             </p>
           </div>
 
